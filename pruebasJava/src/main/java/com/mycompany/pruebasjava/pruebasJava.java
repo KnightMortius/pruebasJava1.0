@@ -31,6 +31,7 @@ public class pruebasJava {
         System.out.println("Consigna A - 1: ");
         System.out.println("---------------------------------------------------");
         //Resultado de cada operacion con numeroUno y numeroDos
+        //Result of every operation with numberOne and numberTwo
         int numeroUno = 8, numeroDos = 4;
 
         int resultado = numeroUno + numeroDos;
@@ -54,7 +55,10 @@ public class pruebasJava {
     public void OperacionA2() {
         System.out.println("Consigna A - 2: ");
         System.out.println("---------------------------------------------------");
-        //Modificar materias para obtener promedio de las 3 materias
+        /*
+        Modificando las variables se obtiene el promedio de las materias
+        Modifying the subjects you get the average of the subjects
+        */
         int matematicas = 5, biologia = 8, quimica = 7;
 
         int promedio = (matematicas + biologia + quimica) / 3;
@@ -71,7 +75,8 @@ public class pruebasJava {
     public void OperacionA3() {
         System.out.println("Consigna A - 3: ");
         System.out.println("---------------------------------------------------");
-        //Modificar operacion = ? del 0 al 4
+        //Modificando la variable operacion = ? del 0 al 4
+        //Modifying the variable operation = ? from 0 to 4
         int operacion = 1, num_uno = 8, num_dos = 4;
 
         switch (operacion) {
@@ -102,7 +107,8 @@ public class pruebasJava {
     public void OperacionA4() {
         System.out.println("Consigna A - 4");
         System.out.println("---------------------------------------------------");
-        //Entrada por usuario - Nombre y la suma de dos variables
+        //Entrada por teclado - Nombre y la suma de dos variables
+        //Keyboard input - Name and the sum of the two variables
         entrada.useDelimiter("\n");
 
         System.out.println("Ingrese su nombre: ");
@@ -130,6 +136,9 @@ public class pruebasJava {
         /*
         Sistema de Coca-Cola - Dias de vacaciones para los trabajadores 
         Dependiendo de su antiguedad y clave
+        
+        Coca-Cola System - Vacation days for workers
+        Depending on its antiquity and key
          */
         System.out.println("*******************************************************");
         System.out.println("*Bienvenido al sistema vacacional de Coca-Cola Company*");
@@ -137,15 +146,15 @@ public class pruebasJava {
 
         System.out.println("Ingrese el nombre del trabajador: ");
         String nombre = entrada.next();
-        System.out.println("");
+        System.out.println();
 
         System.out.println("Ingrese cuantos años de servicio tiene el trabajador: ");
         int antiguedad = entrada.nextInt();
-        System.out.println("");
+        System.out.println();
 
         System.out.println("Ingrese la clave de su departamento: ");
         int clave = entrada.nextInt();
-        System.out.println("");
+        System.out.println();
 
         switch (clave) {
             case 1 -> {
@@ -185,7 +194,8 @@ public class pruebasJava {
     public void OperacionA6() {
         System.out.println("Operacion A - 6: ");
         System.out.println("---------------------------------------------------");
-        //Distintas operaciones usando switch|if usando un valor como parametro
+        //Distintas operaciones usando switch|if con una variable como parametro
+        //Different operations using switch|if with a value as a parameter
         int numeroUno = 5, numeroDos = 3, resultado, parametro = 2;
 
         System.out.println("Numero del parametro: " + parametro);
@@ -219,6 +229,7 @@ public class pruebasJava {
         System.out.println("Consigna A - 7: ");
         System.out.println("---------------------------------------------------");
         //Imprimiendo del 1 al 10 en consola usando for
+        //Printing from 1 to 10 in console using for
         int i;
 
         for (i = 1; i < 10; i++) {
@@ -235,10 +246,12 @@ public class pruebasJava {
         /*
         Imprimiendo en consola desde el 1 al 9 usando los 3 tipos de iteraciones
         for, while, do-while
+        
+        Priting to console from 1 to 9 using the 3 types of iterations
+        for, while, do-while
          */
 
-        System.out.println("Usando el for: ");
-        System.out.println();
+        System.out.println("Usando el for: \n");
 
         int i;
 
@@ -248,8 +261,7 @@ public class pruebasJava {
         System.out.println(i);
         System.out.println("---------------------------------------------------");
 
-        System.out.println("Usando el while: ");
-        System.out.println();
+        System.out.println("Usando el while: \n");
 
         i = 1;
 
@@ -261,8 +273,7 @@ public class pruebasJava {
         System.out.println(i);
 
         System.out.println("---------------------------------------------------");
-        System.out.println("Usando el do-while: ");
-        System.out.println();
+        System.out.println("Usando el do-while: \n");
 
         i = 1;
 
@@ -281,8 +292,14 @@ public class pruebasJava {
         /*
         Imprimiendo en consola desde el 1000 al 0 usando los 3 tipos de iteraciones
         for, while, do-while
+        
+        Priting to console from 1000 to 0 using the 3 types of iterations
+        for, while, do-while
          */
-        int i = 0;
+
+        System.out.println("Usando el for: \n");
+
+        int i;
 
         for (i = 1000; i > 0; i -= 200) {
             System.out.print(i + ", ");
@@ -290,6 +307,9 @@ public class pruebasJava {
 
         System.out.println(i);
         System.out.println("---------------------------------------------------");
+
+        System.out.println("Usando el while: \n");
+
         i = 1000;
 
         while (i > 0) {
@@ -299,6 +319,8 @@ public class pruebasJava {
 
         System.out.println(i);
         System.out.println("---------------------------------------------------");
+
+        System.out.println("Usando el do-while: \n");
         i = 1000;
 
         do {
@@ -313,11 +335,19 @@ public class pruebasJava {
     public void OperacionA10() {
         System.out.println("Consigna A - 10: ");
         System.out.println("---------------------------------------------------");
+        System.out.println("Desde el 1 al 9: \n");
+        
         /*
         Imprimiendo en consola desde el 1 al 9 usando los 3 tipos de iteraciones
         for, while, do-while
+        
+        Priting to console from 1 to 9 using the 3 types of iterations
+        for, while, do-while
          */
-        int i = 0;
+        
+        System.out.println("Usando el for: \n");
+
+        int i;
 
         for (i = 1; i < 10; i++) {
             System.out.print(i + ", ");
@@ -325,6 +355,9 @@ public class pruebasJava {
 
         System.out.println(i);
         System.out.println("---------------------------------------------------");
+
+        System.out.println("Usando el while: \n");
+        
         i = 1;
 
         while (i < 10) {
@@ -334,6 +367,9 @@ public class pruebasJava {
 
         System.out.println(i);
         System.out.println("---------------------------------------------------");
+
+        System.out.println("Usando el do-while: \n");
+
         i = 1;
 
         do {
@@ -343,6 +379,22 @@ public class pruebasJava {
 
         System.out.println(i);
         System.out.println("---------------------------------------------------");
+        System.out.println("Desde el 1 hacia 5 y otra variable hacia el 99 al 95: \n");
+        
+        /*
+        Imprimiendo en consola desde una variable que va hacia el 1 al 5 
+        y otra variable que va desde el 99 al 95 
+        usando los 3 tipos de iteraciones
+        for, while, do-while
+        
+        Priting to console from a variable that goes from 1 to 5
+        and another variable that goues from 99 to 95
+        using the 3 types of iterations
+        for, while, do-while
+         */
+        
+        System.out.println("Usando el for: \n");
+
         int j = 99;
 
         for (i = 1; i < 5; i++) {
@@ -352,6 +404,8 @@ public class pruebasJava {
 
         System.out.println(i + ", " + j);
         System.out.println("---------------------------------------------------");
+        System.out.println("Usando el while: \n");
+
         j = 99;
         i = 1;
 
@@ -363,6 +417,8 @@ public class pruebasJava {
 
         System.out.println(i + ", " + j);
         System.out.println("---------------------------------------------------");
+        System.out.println("Usando el do-while: \n");
+
         j = 99;
         i = 1;
 
@@ -374,7 +430,21 @@ public class pruebasJava {
 
         System.out.println(i + ", " + j);
         System.out.println("---------------------------------------------------");
-        int a = 0, b = 1, c = 0;
+        System.out.println("Usando Secuencia de Fibonacci: \n");
+        
+        /*
+        Imprimiendo en consola la Secuencia de Fibonacci 
+        usando los 3 tipos de iteraciones
+        for, while, do-while
+        
+        Priting with the Fibonacci Sequence on the console
+        using the 3 types of iterations
+        for, while, do-while
+         */
+        
+        System.out.println("Usando el for: \n");
+        
+        int a = 0, b = 1, c;
 
         for (i = 0; i < 10; i++) {
             System.out.print(a + ", ");
@@ -385,6 +455,9 @@ public class pruebasJava {
 
         System.out.println(a);
         System.out.println("---------------------------------------------------");
+        
+        System.out.println("Usando el while: \n");
+
         a = 0;
         b = 1;
         c = 0;
@@ -400,6 +473,9 @@ public class pruebasJava {
 
         System.out.println(a);
         System.out.println("---------------------------------------------------");
+        
+        System.out.println("Usando el do-while: \n");
+
         a = 0;
         b = 1;
         c = 0;
@@ -420,15 +496,17 @@ public class pruebasJava {
     public void OperacionA11() {
         System.out.println("Consigna A - 11: ");
         System.out.println("---------------------------------------------------");
+        //Usando String.equals - Comparacion de cadenas de texto
+        //Using String.equals - Comparison of text strings
         entrada.useDelimiter("\n");
 
         System.out.println("Ingresa el primer nombre: ");
         String nombre_uno = entrada.next();
-        System.out.println("");
+        System.out.println();
 
         System.out.println("Ingresa el segundo nombre: ");
         String nombre_dos = entrada.next();
-        System.out.println("");
+        System.out.println();
 
         if (nombre_uno.equals(nombre_dos)) {
             System.out.println("------------------------");
@@ -443,7 +521,7 @@ public class pruebasJava {
         System.out.println("---------------------------------------------------");
         System.out.println("Ingrese su usuario: ");
         String usuario = entrada.next();
-        System.out.println("");
+        System.out.println();
 
         System.out.println("Ingrese su password: ");
         String password = entrada.next();
@@ -463,21 +541,25 @@ public class pruebasJava {
     public void OperacionA12() {
         System.out.println("Consigna A - 12: ");
         System.out.println("---------------------------------------------------");
+        //Usando String.substring - Usa dos variables (int) para devolver una cadena nueva
+        //Using String.substring - Using two variables (int) to return a new string
         entrada.useDelimiter("\n");
 
         System.out.println("Ingrese una cadena de caracteres: ");
         String cadena_original = entrada.next();
-        System.out.println("");
+        System.out.println();
 
         int num_caracteres = cadena_original.length();
 
-        System.out.println("La cadena de caracteres \"" + cadena_original + "\" posee " + num_caracteres + " caracteres.");
+        System.out.println("La cadena de caracteres \"" + cadena_original + "\" posee " + num_caracteres + " caracteres. \n");
 
         System.out.println("¿Desde que caracter deseas obtener la nueva cadena?: ");
         int desde = entrada.nextInt();
+        System.out.println();
 
         System.out.println("¿Hasta que caracter deseas obtener la nueva cadena?: ");
         int hasta = entrada.nextInt();
+        System.out.println();
 
         String cadena_substraccion = cadena_original.substring(desde, hasta);
 
@@ -488,6 +570,8 @@ public class pruebasJava {
     public void OperacionA13() {
         System.out.println("Consigna A - 13: ");
         System.out.println("---------------------------------------------------");
+        //Uso de arreglos estaticos
+        //Using static arrays
         int arreglo[] = new int[5];
 
         arreglo[0] = 413;
@@ -505,6 +589,13 @@ public class pruebasJava {
     public void OperacionA14() {
         System.out.println("Consigna A - 14: ");
         System.out.println("---------------------------------------------------");
+        /*
+        Uso de Arreglos Dinamicos
+        Variables introducidas a traves de la consola por teclado
+        
+        Using dynamic arrays
+        Variables entered through the console by keyboard
+        */
         System.out.println("Ingrese el tamaño del arreglo: ");
         int longitud = entrada.nextInt();
         System.out.println("");
@@ -528,6 +619,8 @@ public class pruebasJava {
     public void OperacionA15() {
         System.out.println("Consigna A - 15: ");
         System.out.println("---------------------------------------------------");
+        //Uso de Matrices estaticas
+        //Using static arrays
         int numeros[][] = new int[2][2];
 
         numeros[0][0] = 543;
@@ -545,13 +638,21 @@ public class pruebasJava {
     public void OperacionA16() {
         System.out.println("Consigna A - 16: ");
         System.out.println("---------------------------------------------------");
+        
+        /*
+        Uso de Matrices Dinamicas
+        Variables introducidas a traves de la consola por teclado
+        
+        Using dynamic matrix
+        Variables entered through the console by keyboard
+        */
         System.out.println("Ingrese el numero de filas de la matriz: ");
         int filas = entrada.nextInt();
-        System.out.println("");
+        System.out.println();
 
         System.out.println("Ingrese el numero de columnas de la matriz: ");
         int columnas = entrada.nextInt();
-        System.out.println("");
+        System.out.println();
 
         int numeros[][] = new int[filas][columnas];
         int contador = 1;
