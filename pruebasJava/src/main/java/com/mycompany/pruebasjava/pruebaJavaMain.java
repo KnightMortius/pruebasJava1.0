@@ -174,6 +174,23 @@ public class pruebaJavaMain {
                     formulario14.setLocationRelativeTo(null);
                     formulario14.setVisible(true);
                     formulario14.setResizable(false);
+                    break;
+                case 31:
+                    pruebasJava.FormularioA15 formulario15 = modoConsigna.new FormularioA15();
+                    
+                    formulario15.setBounds(0,0,500,500);
+                    formulario15.setLocationRelativeTo(null);
+                    formulario15.setVisible(true);
+                    formulario15.setResizable(false);
+                    break;
+                case 32:
+                    pruebasJava.FormularioA16 formulario16 = modoConsigna.new FormularioA16();
+                    
+                    formulario16.setBounds(0,0,500,500);
+                    formulario16.setLocationRelativeTo(null);
+                    formulario16.setResizable(false);
+                    formulario16.setVisible(true);
+                    break;
                 default:
                     System.out.println("----------------------");
                     System.out.println("Operacion inexistente.");

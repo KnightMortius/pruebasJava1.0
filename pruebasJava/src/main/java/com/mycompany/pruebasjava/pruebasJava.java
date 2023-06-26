@@ -17,19 +17,23 @@ import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.ButtonGroup;
 import javax.swing.JCheckBox;
+import javax.swing.JRadioButton;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 
 public class pruebasJava {
 
-    private Scanner entrada = new Scanner(System.in);
+    private final Scanner entrada = new Scanner(System.in);
 
     public void OperacionA1() {
         System.out.println("Consigna A - 1: ");
         System.out.println("---------------------------------------------------");
         //Resultado de cada operacion con numeroUno y numeroDos
-        int numeroUno = 8, numeroDos = 4, resultado = 0;
+        int numeroUno = 8, numeroDos = 4;
 
-        resultado = numeroUno + numeroDos;
+        int resultado = numeroUno + numeroDos;
 
         System.out.println("El resultado de la suma es: " + resultado);
 
@@ -50,10 +54,10 @@ public class pruebasJava {
     public void OperacionA2() {
         System.out.println("Consigna A - 2: ");
         System.out.println("---------------------------------------------------");
-        //Modificar materias para obtener promedio
-        int matematicas = 5, biologia = 8, quimica = 7, promedio = 0;
+        //Modificar materias para obtener promedio de las 3 materias
+        int matematicas = 5, biologia = 8, quimica = 7;
 
-        promedio = (matematicas + biologia + quimica) / 3;
+        int promedio = (matematicas + biologia + quimica) / 3;
 
         if (promedio >= 6) {
             System.out.println("El alumno aprobo con " + promedio + ".");
@@ -68,22 +72,27 @@ public class pruebasJava {
         System.out.println("Consigna A - 3: ");
         System.out.println("---------------------------------------------------");
         //Modificar operacion = ? del 0 al 4
-        int operacion = 1, num_uno = 8, num_dos = 4, resultado = 0;
+        int operacion = 1, num_uno = 8, num_dos = 4;
 
-        if (operacion == 1) {
-            resultado = num_uno + num_dos;
-            System.out.println("El resultado de la suma es: " + resultado);
-        } else if (operacion == 2) {
-            resultado = num_uno - num_dos;
-            System.out.println("El resultado de la resta es: " + resultado);
-        } else if (operacion == 3) {
-            resultado = num_uno * num_dos;
-            System.out.println("El resultado de la multiplicacion es: " + resultado);
-        } else if (operacion == 4) {
-            resultado = num_uno / num_dos;
-            System.out.println("El resultado de la division es: " + resultado);
-        } else {
-            System.out.println("La opcion que elegiste no existe.");
+        switch (operacion) {
+            case 1 -> {
+                int resultado = num_uno + num_dos;
+                System.out.println("El resultado de la suma es: " + resultado);
+            }
+            case 2 -> {
+                int resultado = num_uno - num_dos;
+                System.out.println("El resultado de la resta es: " + resultado);
+            }
+            case 3 -> {
+                int resultado = num_uno * num_dos;
+                System.out.println("El resultado de la multiplicacion es: " + resultado);
+            }
+            case 4 -> {
+                int resultado = num_uno / num_dos;
+                System.out.println("El resultado de la division es: " + resultado);
+            }
+            default ->
+                System.out.println("La opcion que elegiste no existe.");
         }
 
         System.out.println("---------------------------------------------------");
@@ -93,6 +102,7 @@ public class pruebasJava {
     public void OperacionA4() {
         System.out.println("Consigna A - 4");
         System.out.println("---------------------------------------------------");
+        //Entrada por usuario - Nombre y la suma de dos variables
         entrada.useDelimiter("\n");
 
         System.out.println("Ingrese su nombre: ");
@@ -117,6 +127,10 @@ public class pruebasJava {
         entrada.useDelimiter("\n");
         System.out.println("Operacion A - 5: ");
         System.out.println("---------------------------------------------------");
+        /*
+        Sistema de Coca-Cola - Dias de vacaciones para los trabajadores 
+        Dependiendo de su antiguedad y clave
+         */
         System.out.println("*******************************************************");
         System.out.println("*Bienvenido al sistema vacacional de Coca-Cola Company*");
         System.out.println("*******************************************************");
@@ -133,29 +147,35 @@ public class pruebasJava {
         int clave = entrada.nextInt();
         System.out.println("");
 
-        if (clave == 1) {
-            if (antiguedad == 1) {
-                System.out.println("El trabajador " + nombre + ", derecho a 6 dias de vacaciones");
-            } else if (antiguedad >= 2 && antiguedad <= 6) {
-                System.out.println("El trabajador " + nombre + ", derecho a 14 dias de vacaciones");
-            } else if (antiguedad == 7) {
-                System.out.println("El trabajador " + nombre + ", derecho a 20 dias de vacaciones");
+        switch (clave) {
+            case 1 -> {
+                if (antiguedad == 1) {
+                    System.out.println("El trabajador " + nombre + ", derecho a 6 dias de vacaciones");
+                } else if (antiguedad >= 2 && antiguedad <= 6) {
+                    System.out.println("El trabajador " + nombre + ", derecho a 14 dias de vacaciones");
+                } else if (antiguedad == 7) {
+                    System.out.println("El trabajador " + nombre + ", derecho a 20 dias de vacaciones");
+                }
             }
-        } else if (clave == 2) {
-            if (antiguedad == 1) {
-                System.out.println("El trabajador " + nombre + ", derecho a 7 dias de vacaciones");
-            } else if (antiguedad >= 2 && antiguedad <= 6) {
-                System.out.println("El trabajador " + nombre + ", derecho a 15 dias de vacaciones");
-            } else if (antiguedad == 7) {
-                System.out.println("El trabajador " + nombre + ", derecho a 22 dias de vacaciones");
+            case 2 -> {
+                if (antiguedad == 1) {
+                    System.out.println("El trabajador " + nombre + ", derecho a 7 dias de vacaciones");
+                } else if (antiguedad >= 2 && antiguedad <= 6) {
+                    System.out.println("El trabajador " + nombre + ", derecho a 15 dias de vacaciones");
+                } else if (antiguedad == 7) {
+                    System.out.println("El trabajador " + nombre + ", derecho a 22 dias de vacaciones");
+                }
             }
-        } else if (clave == 3) {
-            if (antiguedad == 1) {
-                System.out.println("El trabajador " + nombre + ", derecho a 10 dias de vacaciones");
-            } else if (antiguedad >= 2 && antiguedad <= 6) {
-                System.out.println("El trabajador " + nombre + ", derecho a 20 dias de vacaciones");
-            } else if (antiguedad == 7) {
-                System.out.println("El trabajador " + nombre + ", derecho a 30 dias de vacaciones");
+            case 3 -> {
+                if (antiguedad == 1) {
+                    System.out.println("El trabajador " + nombre + ", derecho a 10 dias de vacaciones");
+                } else if (antiguedad >= 2 && antiguedad <= 6) {
+                    System.out.println("El trabajador " + nombre + ", derecho a 20 dias de vacaciones");
+                } else if (antiguedad == 7) {
+                    System.out.println("El trabajador " + nombre + ", derecho a 30 dias de vacaciones");
+                }
+            }
+            default -> {
             }
         }
 
@@ -165,7 +185,10 @@ public class pruebasJava {
     public void OperacionA6() {
         System.out.println("Operacion A - 6: ");
         System.out.println("---------------------------------------------------");
+        //Distintas operaciones usando switch|if usando un valor como parametro
         int numeroUno = 5, numeroDos = 3, resultado, parametro = 2;
+
+        System.out.println("Numero del parametro: " + parametro);
 
         switch (parametro) {
             case 1:
@@ -195,6 +218,7 @@ public class pruebasJava {
     public void OperacionA7() {
         System.out.println("Consigna A - 7: ");
         System.out.println("---------------------------------------------------");
+        //Imprimiendo del 1 al 10 en consola usando for
         int i;
 
         for (i = 1; i < 10; i++) {
@@ -208,6 +232,14 @@ public class pruebasJava {
     public void OperacionA8() {
         System.out.println("Consigna A - 8: ");
         System.out.println("---------------------------------------------------");
+        /*
+        Imprimiendo en consola desde el 1 al 9 usando los 3 tipos de iteraciones
+        for, while, do-while
+         */
+
+        System.out.println("Usando el for: ");
+        System.out.println();
+
         int i;
 
         for (i = 1; i < 8; i += 2) {
@@ -215,6 +247,10 @@ public class pruebasJava {
         }
         System.out.println(i);
         System.out.println("---------------------------------------------------");
+
+        System.out.println("Usando el while: ");
+        System.out.println();
+
         i = 1;
 
         while (i < 8) {
@@ -225,6 +261,9 @@ public class pruebasJava {
         System.out.println(i);
 
         System.out.println("---------------------------------------------------");
+        System.out.println("Usando el do-while: ");
+        System.out.println();
+
         i = 1;
 
         do {
@@ -239,6 +278,10 @@ public class pruebasJava {
     public void OperacionA9() {
         System.out.println("Consigna A - 9: ");
         System.out.println("---------------------------------------------------");
+        /*
+        Imprimiendo en consola desde el 1000 al 0 usando los 3 tipos de iteraciones
+        for, while, do-while
+         */
         int i = 0;
 
         for (i = 1000; i > 0; i -= 200) {
@@ -270,6 +313,10 @@ public class pruebasJava {
     public void OperacionA10() {
         System.out.println("Consigna A - 10: ");
         System.out.println("---------------------------------------------------");
+        /*
+        Imprimiendo en consola desde el 1 al 9 usando los 3 tipos de iteraciones
+        for, while, do-while
+         */
         int i = 0;
 
         for (i = 1; i < 10; i++) {
@@ -809,11 +856,10 @@ public class pruebasJava {
     }
 
     public class FormularioA11 extends JFrame implements ActionListener {
-        
+
         /*
         
-        */
-
+         */
         private JLabel etiqueta1, etiqueta2, etiqueta3;
         private JComboBox seleccion1, seleccion2, seleccion3;
         private JButton boton1;
@@ -882,15 +928,14 @@ public class pruebasJava {
     }
 
     public class FormularioA12 extends JFrame implements ActionListener {
-        
+
         /*
         Interfaz Grafica
         Prueba 12
         JMenuBar - Barra de opciones
         JMenu - Despliegue de opciones
         JMenuItem - Items desplegados desde el JMenu
-        */
-
+         */
         private JMenuBar barra1;
         private JMenu menu1;
         private JMenuItem item1, item2, item3;
@@ -932,85 +977,200 @@ public class pruebasJava {
     }
 
     public class FormularioA13 extends JFrame implements ActionListener {
+
         /*
         Interfaz Grafica
         Prueba 13
         JMenuBar - Barra de opciones
         JMenu - Despliegue de opciones
         JMenuItem - Items desplegados desde el JMenu
-        */
-        
+         */
         private JMenuBar menubarra1;
         private JMenu opciones, fondoResolucion, fondoColor;
         private JMenuItem fondoResolucion1, fondoResolucion2, fondoColor1, fondoColor2;
-        
+
         public FormularioA13() {
             setLayout(null);
             setDefaultCloseOperation(EXIT_ON_CLOSE);
-            
+
             menubarra1 = new JMenuBar();
             setJMenuBar(menubarra1);
-            
+
             opciones = new JMenu("Opciones");
             menubarra1.add(opciones);
-            
+
             fondoResolucion = new JMenu("Tamaño de la ventana");
             opciones.add(fondoResolucion);
-            
+
             fondoColor = new JMenu("Color de fondo");
             opciones.add(fondoColor);
-            
+
             fondoResolucion1 = new JMenuItem("300*200");
             fondoResolucion.add(fondoResolucion1);
             fondoResolucion1.addActionListener(this);
-            
+
             fondoResolucion2 = new JMenuItem("640*480");
             fondoResolucion.add(fondoResolucion2);
             fondoResolucion2.addActionListener(this);
-            
+
             fondoColor1 = new JMenuItem("Rojo");
             fondoColor.add(fondoColor1);
             fondoColor1.addActionListener(this);
-            
+
             fondoColor2 = new JMenuItem("Verde");
             fondoColor.add(fondoColor2);
             fondoColor2.addActionListener(this);
-            
+
         }
-        
+
         public void actionPerformed(ActionEvent e) {
             if (e.getSource() == fondoResolucion1) {
-                setSize(300,200);
+                setSize(300, 200);
             }
-            
+
             if (e.getSource() == fondoResolucion2) {
-                setSize(640,480);
+                setSize(640, 480);
             }
-            
+
             if (e.getSource() == fondoColor1) {
-                getContentPane().setBackground(new Color(255,0,0));
+                getContentPane().setBackground(new Color(255, 0, 0));
             }
-            
+
             if (e.getSource() == fondoColor2) {
-                getContentPane().setBackground(new Color(0,255,0));
+                getContentPane().setBackground(new Color(0, 255, 0));
             }
         }
     }
 
-    public class FormularioA14 extends JFrame {
+    public class FormularioA14 extends JFrame implements ChangeListener {
+
         /*
         Interfaz Gráfica
         Prueba 14
         JCheckBox - Uso de casillas de verificacion
-        */
-        
-        public JCheckBox checkbox1, checkbox2, checkbox3;
+         */
+        private JCheckBox checkbox1, checkbox2, checkbox3;
 
         public FormularioA14() {
             setLayout(null);
             setDefaultCloseOperation(EXIT_ON_CLOSE);
-            
-            
+
+            checkbox1 = new JCheckBox("Ingles");
+            checkbox1.setBounds(10, 10, 300, 30);
+            add(checkbox1);
+            checkbox1.addChangeListener(this);
+
+            checkbox2 = new JCheckBox("Frances");
+            checkbox2.setBounds(10, 50, 300, 30);
+            add(checkbox2);
+            checkbox2.addChangeListener(this);
+
+            checkbox3 = new JCheckBox("Aleman");
+            checkbox3.setBounds(10, 90, 300, 30);
+            add(checkbox3);
+            checkbox3.addChangeListener(this);
+        }
+
+        public void stateChanged(ChangeEvent e) {
+            String titulo = "";
+
+            if (checkbox1.isSelected() == true) {
+                titulo = titulo + "Ingles";
+            }
+
+            if (checkbox2.isSelected() == true) {
+                titulo = titulo + "Frances";
+            }
+
+            if (checkbox3.isSelected() == true) {
+                titulo = titulo + "Aleman";
+            }
+
+            setTitle(titulo);
+        }
+    }
+
+    public class FormularioA15 extends JFrame implements ChangeListener, ActionListener {
+
+        private JLabel etiqueta1;
+        private JCheckBox checkbox1;
+        private JButton boton1;
+
+        public FormularioA15() {
+            setLayout(null);
+            setDefaultCloseOperation(EXIT_ON_CLOSE);
+
+            etiqueta1 = new JLabel("Aceptar terminos y condiciones");
+            etiqueta1.setBounds(10, 10, 300, 30);
+            add(etiqueta1);
+
+            checkbox1 = new JCheckBox("Acepto");
+            checkbox1.setBounds(10, 50, 300, 30);
+            add(checkbox1);
+            checkbox1.addChangeListener(this);
+
+            boton1 = new JButton("Continuar");
+            boton1.setBounds(10, 90, 300, 30);
+            add(boton1);
+            boton1.addActionListener(this);
+            boton1.setEnabled(false);
+        }
+
+        public void stateChanged(ChangeEvent e) {
+            if (checkbox1.isSelected() == true) {
+                boton1.setEnabled(true);
+            }
+        }
+
+        public void actionPerformed(ActionEvent e) {
+            if (e.getSource() == boton1) {
+                System.exit(0);
+            }
+        }
+    }
+
+    public class FormularioA16 extends JFrame implements ChangeListener {
+
+        private JRadioButton radio1, radio2, radio3;
+        private ButtonGroup bg;
+
+        public FormularioA16() {
+            setLayout(null);
+            setDefaultCloseOperation(EXIT_ON_CLOSE);
+
+            bg = new ButtonGroup();
+
+            radio1 = new JRadioButton("640*480");
+            radio1.setBounds(10, 20, 100, 30);
+            add(radio1);
+            radio1.addChangeListener(this);
+            bg.add(radio1);
+
+            radio2 = new JRadioButton("800*600");
+            radio2.setBounds(10, 90, 100, 30);
+            add(radio2);
+            radio2.addChangeListener(this);
+            bg.add(radio2);
+
+            radio3 = new JRadioButton("1024*768");
+            radio3.setBounds(10, 160, 100, 30);
+            add(radio3);
+            radio3.addChangeListener(this);
+            bg.add(radio3);
+        }
+
+        public void stateChanged(ChangeEvent e) {
+            if (radio1.isSelected() == true) {
+                setSize(640, 480);
+            }
+
+            if (radio2.isSelected() == true) {
+                setSize(800, 600);
+            }
+
+            if (radio3.isSelected() == true) {
+                setSize(1024, 768);
+            }
         }
     }
 }
