@@ -25,13 +25,19 @@ import javax.swing.event.ChangeListener;
 
 public class pruebasJava {
 
+    /*
+    Hechos a partir de la Geekipedia de Ernesto
+    Java desde Cero
+     */
     private final Scanner entrada = new Scanner(System.in);
 
     public void OperacionA1() {
         System.out.println("Consigna A - 1: ");
         System.out.println("---------------------------------------------------");
-        //Resultado de cada operacion con numeroUno y numeroDos
-        //Result of every operation with numberOne and numberTwo
+        /*
+        Resultado de cada operacion con numeroUno y numeroDos
+        Result of every operation with numberOne and numberTwo
+         */
         int numeroUno = 8, numeroDos = 4;
 
         int resultado = numeroUno + numeroDos;
@@ -58,7 +64,7 @@ public class pruebasJava {
         /*
         Modificando las variables se obtiene el promedio de las materias
         Modifying the subjects you get the average of the subjects
-        */
+         */
         int matematicas = 5, biologia = 8, quimica = 7;
 
         int promedio = (matematicas + biologia + quimica) / 3;
@@ -75,8 +81,10 @@ public class pruebasJava {
     public void OperacionA3() {
         System.out.println("Consigna A - 3: ");
         System.out.println("---------------------------------------------------");
-        //Modificando la variable operacion = ? del 0 al 4
-        //Modifying the variable operation = ? from 0 to 4
+        /*
+        Modificando la variable operacion = ? del 0 al 4
+        Modifying the variable operation = ? from 0 to 4
+         */
         int operacion = 1, num_uno = 8, num_dos = 4;
 
         switch (operacion) {
@@ -107,8 +115,10 @@ public class pruebasJava {
     public void OperacionA4() {
         System.out.println("Consigna A - 4");
         System.out.println("---------------------------------------------------");
+        /*
         //Entrada por teclado - Nombre y la suma de dos variables
         //Keyboard input - Name and the sum of the two variables
+         */
         entrada.useDelimiter("\n");
 
         System.out.println("Ingrese su nombre: ");
@@ -194,32 +204,33 @@ public class pruebasJava {
     public void OperacionA6() {
         System.out.println("Operacion A - 6: ");
         System.out.println("---------------------------------------------------");
-        //Distintas operaciones usando switch|if con una variable como parametro
-        //Different operations using switch|if with a value as a parameter
+        /*
+        Distintas operaciones usando switch|if con una variable como parametro
+        Different operations using switch|if with a value as a parameter
+         */
         int numeroUno = 5, numeroDos = 3, resultado, parametro = 2;
 
         System.out.println("Numero del parametro: " + parametro);
 
         switch (parametro) {
-            case 1:
+            case 1 -> {
                 resultado = numeroUno + numeroDos;
                 System.out.println("El resultado de la suma es: " + resultado);
-                break;
-            case 2:
+            }
+            case 2 -> {
                 resultado = numeroUno - numeroDos;
                 System.out.println("El resultado de la resta es: " + resultado);
-                break;
-            case 3:
+            }
+            case 3 -> {
                 resultado = numeroUno * numeroDos;
                 System.out.println("El resultado de la multiplicacion es: " + resultado);
-                break;
-            case 4:
+            }
+            case 4 -> {
                 resultado = numeroUno / numeroDos;
                 System.out.println("El resultado de la division es: " + resultado);
-                break;
-            default:
+            }
+            default ->
                 System.out.println("Error, la opcion no existe.");
-                break;
         }
 
         System.out.println("---------------------------------------------------");
@@ -228,8 +239,10 @@ public class pruebasJava {
     public void OperacionA7() {
         System.out.println("Consigna A - 7: ");
         System.out.println("---------------------------------------------------");
-        //Imprimiendo del 1 al 10 en consola usando for
-        //Printing from 1 to 10 in console using for
+        /*
+        Imprimiendo del 1 al 10 en consola usando for
+        Printing from 1 to 10 in console using for
+         */
         int i;
 
         for (i = 1; i < 10; i++) {
@@ -336,7 +349,7 @@ public class pruebasJava {
         System.out.println("Consigna A - 10: ");
         System.out.println("---------------------------------------------------");
         System.out.println("Desde el 1 al 9: \n");
-        
+
         /*
         Imprimiendo en consola desde el 1 al 9 usando los 3 tipos de iteraciones
         for, while, do-while
@@ -344,7 +357,6 @@ public class pruebasJava {
         Priting to console from 1 to 9 using the 3 types of iterations
         for, while, do-while
          */
-        
         System.out.println("Usando el for: \n");
 
         int i;
@@ -357,7 +369,7 @@ public class pruebasJava {
         System.out.println("---------------------------------------------------");
 
         System.out.println("Usando el while: \n");
-        
+
         i = 1;
 
         while (i < 10) {
@@ -380,7 +392,7 @@ public class pruebasJava {
         System.out.println(i);
         System.out.println("---------------------------------------------------");
         System.out.println("Desde el 1 hacia 5 y otra variable hacia el 99 al 95: \n");
-        
+
         /*
         Imprimiendo en consola desde una variable que va hacia el 1 al 5 
         y otra variable que va desde el 99 al 95 
@@ -392,7 +404,6 @@ public class pruebasJava {
         using the 3 types of iterations
         for, while, do-while
          */
-        
         System.out.println("Usando el for: \n");
 
         int j = 99;
@@ -431,7 +442,7 @@ public class pruebasJava {
         System.out.println(i + ", " + j);
         System.out.println("---------------------------------------------------");
         System.out.println("Usando Secuencia de Fibonacci: \n");
-        
+
         /*
         Imprimiendo en consola la Secuencia de Fibonacci 
         usando los 3 tipos de iteraciones
@@ -441,9 +452,8 @@ public class pruebasJava {
         using the 3 types of iterations
         for, while, do-while
          */
-        
         System.out.println("Usando el for: \n");
-        
+
         int a = 0, b = 1, c;
 
         for (i = 0; i < 10; i++) {
@@ -455,7 +465,7 @@ public class pruebasJava {
 
         System.out.println(a);
         System.out.println("---------------------------------------------------");
-        
+
         System.out.println("Usando el while: \n");
 
         a = 0;
@@ -473,7 +483,7 @@ public class pruebasJava {
 
         System.out.println(a);
         System.out.println("---------------------------------------------------");
-        
+
         System.out.println("Usando el do-while: \n");
 
         a = 0;
@@ -496,8 +506,10 @@ public class pruebasJava {
     public void OperacionA11() {
         System.out.println("Consigna A - 11: ");
         System.out.println("---------------------------------------------------");
-        //Usando String.equals - Comparacion de cadenas de texto
-        //Using String.equals - Comparison of text strings
+        /*
+        Usando String.equals - Comparacion de cadenas de texto
+        Using String.equals - Comparison of text strings
+         */
         entrada.useDelimiter("\n");
 
         System.out.println("Ingresa el primer nombre: ");
@@ -541,8 +553,10 @@ public class pruebasJava {
     public void OperacionA12() {
         System.out.println("Consigna A - 12: ");
         System.out.println("---------------------------------------------------");
-        //Usando String.substring - Usa dos variables (int) para devolver una cadena nueva
-        //Using String.substring - Using two variables (int) to return a new string
+        /*
+        Usando String.substring - Usa dos variables (int) para devolver una cadena nueva
+        Using String.substring - Using two variables (int) to return a new string
+         */
         entrada.useDelimiter("\n");
 
         System.out.println("Ingrese una cadena de caracteres: ");
@@ -570,8 +584,10 @@ public class pruebasJava {
     public void OperacionA13() {
         System.out.println("Consigna A - 13: ");
         System.out.println("---------------------------------------------------");
-        //Uso de arreglos estaticos
-        //Using static arrays
+        /*
+        Uso de arreglos estaticos
+        Using static arrays
+         */
         int arreglo[] = new int[5];
 
         arreglo[0] = 413;
@@ -595,7 +611,7 @@ public class pruebasJava {
         
         Using dynamic arrays
         Variables entered through the console by keyboard
-        */
+         */
         System.out.println("Ingrese el tamaño del arreglo: ");
         int longitud = entrada.nextInt();
         System.out.println("");
@@ -619,8 +635,10 @@ public class pruebasJava {
     public void OperacionA15() {
         System.out.println("Consigna A - 15: ");
         System.out.println("---------------------------------------------------");
-        //Uso de Matrices estaticas
-        //Using static arrays
+        /*
+        Uso de Matrices estaticas
+        Using static arrays
+         */
         int numeros[][] = new int[2][2];
 
         numeros[0][0] = 543;
@@ -638,14 +656,14 @@ public class pruebasJava {
     public void OperacionA16() {
         System.out.println("Consigna A - 16: ");
         System.out.println("---------------------------------------------------");
-        
+
         /*
         Uso de Matrices Dinamicas
         Variables introducidas a traves de la consola por teclado
         
         Using dynamic matrix
         Variables entered through the console by keyboard
-        */
+         */
         System.out.println("Ingrese el numero de filas de la matriz: ");
         int filas = entrada.nextInt();
         System.out.println();
@@ -679,12 +697,17 @@ public class pruebasJava {
 
     public class FormularioA1 extends JFrame {
 
-        private JLabel etiqueta1;
+        /*
+        JLabel - Etiqueta de texto
+        JLabel - Label of text
+         */
+        private final JLabel etiqueta1;
 
         public FormularioA1() {
             setDefaultCloseOperation(EXIT_ON_CLOSE);
             setLayout(null);
-            etiqueta1 = new JLabel("Bienvenido a la Geekipedia de Ernesto");
+            etiqueta1 = new JLabel("Bienvenido a la prueba de "
+                    + "Interfaz Grafica de KnightMortius");
             etiqueta1.setBounds(10, 20, 400, 300);
             add(etiqueta1);
         }
@@ -692,7 +715,14 @@ public class pruebasJava {
 
     public class FormularioA2 extends JFrame {
 
-        private JLabel etiqueta1, etiqueta2;
+        /*
+        JLabel - Etiqueta de texto
+        JLabel - Label of text
+        
+        String.setBounds - Coordenadas del objeto
+        String.setBounds - Object Coordinates
+         */
+        private final JLabel etiqueta1, etiqueta2;
 
         public FormularioA2() {
             setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -709,7 +739,14 @@ public class pruebasJava {
 
     public class FormularioA3 extends JFrame implements ActionListener {
 
-        private JButton boton1;
+        /*
+        JButton - Objeto tipo boton
+        JButton - Object type button
+        
+        actionPerformed(ActionEvent e) - Uso de acciones sobre el boton
+        actionPerformed(ActionEvent e) - Using actions on the button
+         */
+        private final JButton boton1;
 
         public FormularioA3() {
             setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -720,6 +757,7 @@ public class pruebasJava {
             boton1.addActionListener(this);
         }
 
+        @Override
         public void actionPerformed(ActionEvent e) {
             if (e.getSource() == boton1) {
                 System.exit(0);
@@ -729,8 +767,21 @@ public class pruebasJava {
 
     public class FormularioA4 extends JFrame implements ActionListener {
 
-        private JButton boton1, boton2, boton3;
-        private JLabel etiqueta1;
+        /*
+        JButton - Objeto tipo boton
+        JButton - Object type button
+        
+        actionPerformed(ActionEvent e) - Uso de acciones sobre el boton
+        actionPerformed(ActionEvent e) - Using actions on the button
+        
+        String.setText("") - Cambia lo que esta escrito 
+        por otra cadena escrita por el usuario
+        
+        String.setText("") - Change what is written
+        by another user-written string
+         */
+        private final JButton boton1, boton2, boton3;
+        private final JLabel etiqueta1;
 
         public FormularioA4() {
             setLayout(null);
@@ -756,6 +807,7 @@ public class pruebasJava {
             boton3.addActionListener(this);
         }
 
+        @Override
         public void actionPerformed(ActionEvent e) {
             if (e.getSource() == boton1) {
                 etiqueta1.setText("Has presionado el botón 1");
@@ -769,9 +821,19 @@ public class pruebasJava {
 
     public class FormularioA5 extends JFrame implements ActionListener {
 
-        private JLabel etiqueta1;
-        private JTextField campoTexto1;
-        private JButton boton1;
+        /*
+        JButton - Objeto tipo boton
+        JButton - Object type button
+        
+        actionPerformed(ActionEvent e) - Uso de acciones sobre el boton
+        actionPerformed(ActionEvent e) - Using actions on the button
+        
+        setTitle("") - Cambia el titulo del programa
+        setTItle("") - Change the title of the program
+         */
+        private final JLabel etiqueta1;
+        private final JTextField campoTexto1;
+        private final JButton boton1;
 
         public FormularioA5() {
             setLayout(null);
@@ -790,6 +852,7 @@ public class pruebasJava {
             boton1.addActionListener(this);
         }
 
+        @Override
         public void actionPerformed(ActionEvent e) {
             if (e.getSource() == boton1) {
                 String texto = campoTexto1.getText();
@@ -801,8 +864,16 @@ public class pruebasJava {
 
     public class FormularioA6 extends JFrame {
 
-        private JTextField campoTexto1;
-        private JTextArea cuadroTexto1;
+        /*
+        JTextArea - Objeto tipo cuadro de texto
+        JTextArea - Object type text box
+        
+        JTextField - Objeto tipo campo de texto
+        JTextField - Object type text field
+        
+         */
+        private final JTextField campoTexto1;
+        private final JTextArea cuadroTexto1;
 
         public FormularioA6() {
             setLayout(null);
@@ -820,9 +891,19 @@ public class pruebasJava {
 
     public class FormularioA7 extends JFrame {
 
-        private JTextField campoTexto1;
-        private JTextArea cuadroTexto1;
-        private JScrollPane panelbarra1;
+        /*
+        JTextArea - Objeto tipo cuadro de texto
+        JTextArea - Object type text box
+        
+        JTextField - Objeto tipo campo de texto
+        JTextField - Object type text field
+        
+        JScrollPane - Objeto tipo barra de deslizamiento
+        JScrollPane - Object type slider bar
+         */
+        private final JTextField campoTexto1;
+        private final JTextArea cuadroTexto1;
+        private final JScrollPane panelbarra1;
 
         public FormularioA7() {
             setLayout(null);
@@ -841,10 +922,23 @@ public class pruebasJava {
 
     public class FormularioA8 extends JFrame implements ActionListener {
 
-        private JTextField campoTexto1;
-        private JTextArea cuadroTexto1;
-        private JScrollPane panelbarra1;
-        private JButton boton1;
+        /*
+        JTextArea - Objeto tipo cuadro de texto
+        JTextArea - Object type text box
+        
+        JTextField - Objeto tipo campo de texto
+        JTextField - Object type text field
+        
+        JScrollPane - Objeto tipo barra de deslizamiento
+        JScrollPane - Object type slider bar
+        
+        Pasando texto desde JTextField hacia JTextArea usando un boton
+        Passing text from JTextField to JTextArea using a button
+         */
+        private final JTextField campoTexto1;
+        private final JTextArea cuadroTexto1;
+        private final JScrollPane panelbarra1;
+        private final JButton boton1;
 
         String texto = "";
 
@@ -869,6 +963,7 @@ public class pruebasJava {
             boton1.addActionListener(this);
         }
 
+        @Override
         public void actionPerformed(ActionEvent e) {
             if (e.getSource() == boton1) {
                 texto += campoTexto1.getText() + "\n";
@@ -880,9 +975,22 @@ public class pruebasJava {
 
     public class FormularioA9 extends JFrame implements ActionListener {
 
-        private JTextField campoTexto1, campoTexto2;
-        private JLabel etiqueta1, etiqueta2, etiqueta3;
-        private JButton boton1;
+        /*
+        JTextArea - Objeto tipo cuadro de texto
+        JTextArea - Object type text box
+        
+        JTextField - Objeto tipo campo de texto
+        JTextField - Object type text field
+        
+        JScrollPane - Objeto tipo barra de deslizamiento
+        JScrollPane - Object type slider bar
+        
+        Pasando texto desde JTextField hacia JTextArea usando un boton
+        Passing text from JTextField to JTextArea using a button
+         */
+        private final JTextField campoTexto1, campoTexto2;
+        private final JLabel etiqueta1, etiqueta2, etiqueta3;
+        private final JButton boton1;
 
         public FormularioA9() {
             setLayout(null);
@@ -914,14 +1022,13 @@ public class pruebasJava {
             boton1.addActionListener(this);
         }
 
+        @Override
         public void actionPerformed(ActionEvent e) {
             if (e.getSource() == boton1) {
-                int valor1 = 0, valor2 = 0, resultado = 0;
+                int valor1 = Integer.parseInt(campoTexto1.getText());
+                int valor2 = Integer.parseInt(campoTexto2.getText());
 
-                valor1 = Integer.parseInt(campoTexto1.getText());
-                valor2 = Integer.parseInt(campoTexto2.getText());
-
-                resultado = valor1 + valor2;
+                int resultado = valor1 + valor2;
 
                 etiqueta3.setText("Resultado: " + resultado);
             }
@@ -930,7 +1037,14 @@ public class pruebasJava {
 
     public class FormularioA10 extends JFrame implements ItemListener {
 
-        private JComboBox seleccion1;
+        /*
+        JComboBox - Objeto tipo lista desplegable
+        JComboBox - Dropdown list object
+        
+        Usando el JComboBox para cambiar el nombre del titulo del programa
+        Using the JComboBox for change the name of the program title
+         */
+        private final JComboBox seleccion1;
 
         public FormularioA10() {
             setLayout(null);
@@ -947,6 +1061,7 @@ public class pruebasJava {
             seleccion1.addItemListener(this);
         }
 
+        @Override
         public void itemStateChanged(ItemEvent e) {
             if (e.getSource() == seleccion1) {
                 String seleccion = seleccion1.getSelectedItem().toString();
@@ -959,11 +1074,17 @@ public class pruebasJava {
     public class FormularioA11 extends JFrame implements ActionListener {
 
         /*
+        Usando el JComboBox 
+        para cambiar el color del boton usando ActionListener
+        (Añadiendo una accion al presionar el boton)
         
+        Using the JComboBox
+        to change the color of the button using ActionListener
+        (Adding an action when pressing the button)
          */
-        private JLabel etiqueta1, etiqueta2, etiqueta3;
-        private JComboBox seleccion1, seleccion2, seleccion3;
-        private JButton boton1;
+        private final JLabel etiqueta1, etiqueta2, etiqueta3;
+        private final JComboBox seleccion1, seleccion2, seleccion3;
+        private final JButton boton1;
 
         public FormularioA11() {
             setLayout(null);
@@ -1011,6 +1132,7 @@ public class pruebasJava {
             boton1.addActionListener(this);
         }
 
+        @Override
         public void actionPerformed(ActionEvent e) {
             if (e.getSource() == boton1) {
                 String cad1 = seleccion1.getSelectedItem().toString();
@@ -1031,15 +1153,20 @@ public class pruebasJava {
     public class FormularioA12 extends JFrame implements ActionListener {
 
         /*
-        Interfaz Grafica
-        Prueba 12
         JMenuBar - Barra de opciones
         JMenu - Despliegue de opciones
         JMenuItem - Items desplegados desde el JMenu
+        
+        JMenuBar - Options Bar
+        JMenu - Options dropdown
+        JMenuItem - Items displayed from the JMenu
+        
+        Usando JMenuItem y ActionListener para cambiar el color del fondo
+        Using JMenuItem and ActionListener to change the background color
          */
-        private JMenuBar barra1;
-        private JMenu menu1;
-        private JMenuItem item1, item2, item3;
+        private final JMenuBar barra1;
+        private final JMenu menu1;
+        private final JMenuItem item1, item2, item3;
 
         public FormularioA12() {
             setLayout(null);
@@ -1064,6 +1191,7 @@ public class pruebasJava {
             menu1.add(item3);
         }
 
+        @Override
         public void actionPerformed(ActionEvent e) {
             Container fondo = this.getContentPane();
 
@@ -1080,15 +1208,15 @@ public class pruebasJava {
     public class FormularioA13 extends JFrame implements ActionListener {
 
         /*
-        Interfaz Grafica
-        Prueba 13
-        JMenuBar - Barra de opciones
-        JMenu - Despliegue de opciones
-        JMenuItem - Items desplegados desde el JMenu
+        Usando JMenu y JMenuItem 
+        para cambiar el color del fondo y tamaño de la ventana
+        
+        Using JMenu and JMenuItem
+        to change the background color and window size
          */
-        private JMenuBar menubarra1;
-        private JMenu opciones, fondoResolucion, fondoColor;
-        private JMenuItem fondoResolucion1, fondoResolucion2, fondoColor1, fondoColor2;
+        private final JMenuBar menubarra1;
+        private final JMenu opciones, fondoResolucion, fondoColor;
+        private final JMenuItem fondoResolucion1, fondoResolucion2, fondoColor1, fondoColor2;
 
         public FormularioA13() {
             setLayout(null);
@@ -1124,6 +1252,7 @@ public class pruebasJava {
 
         }
 
+        @Override
         public void actionPerformed(ActionEvent e) {
             if (e.getSource() == fondoResolucion1) {
                 setSize(300, 200);
@@ -1146,11 +1275,13 @@ public class pruebasJava {
     public class FormularioA14 extends JFrame implements ChangeListener {
 
         /*
-        Interfaz Gráfica
-        Prueba 14
-        JCheckBox - Uso de casillas de verificacion
+        JCheckBox - Uso de casilla de verificacion
+        JCheckBox - Use of check box
+        
+        Usando JCheckBox para cambiar el titulo del programa
+        Using JCheckBox to change the program title
          */
-        private JCheckBox checkbox1, checkbox2, checkbox3;
+        private final JCheckBox checkbox1, checkbox2, checkbox3;
 
         public FormularioA14() {
             setLayout(null);
@@ -1172,6 +1303,7 @@ public class pruebasJava {
             checkbox3.addChangeListener(this);
         }
 
+        @Override
         public void stateChanged(ChangeEvent e) {
             String titulo = "";
 
@@ -1193,9 +1325,16 @@ public class pruebasJava {
 
     public class FormularioA15 extends JFrame implements ChangeListener, ActionListener {
 
-        private JLabel etiqueta1;
-        private JCheckBox checkbox1;
-        private JButton boton1;
+        /*
+        Usando JCheckBox para que el boton (JButton) 
+        sea habilitado y pueda ser presionado
+        
+        Using JCheckBox for the button (JButton)
+         be enabled and can be pressed
+         */
+        private final JLabel etiqueta1;
+        private final JCheckBox checkbox1;
+        private final JButton boton1;
 
         public FormularioA15() {
             setLayout(null);
@@ -1217,12 +1356,14 @@ public class pruebasJava {
             boton1.setEnabled(false);
         }
 
+        @Override
         public void stateChanged(ChangeEvent e) {
             if (checkbox1.isSelected() == true) {
                 boton1.setEnabled(true);
             }
         }
 
+        @Override
         public void actionPerformed(ActionEvent e) {
             if (e.getSource() == boton1) {
                 System.exit(0);
@@ -1232,8 +1373,26 @@ public class pruebasJava {
 
     public class FormularioA16 extends JFrame implements ChangeListener {
 
-        private JRadioButton radio1, radio2, radio3;
-        private ButtonGroup bg;
+        /*
+        JRadioButton - Usado para elegir una sola opcion 
+        de un conjunto predeterminado
+        
+        JRadioButton - Used to choose a single option
+        from a predetermined set
+        
+        ButtonGroup - Se deben agrupar para que actúen en conjunto, 
+        es decir cuando se selecciona uno automáticamente 
+        se deben deseleccionar los otros
+        
+        ButtonGroup - They must be grouped to act together,
+        i.e. when one is selected automatically
+        the others must be deselected
+        
+        Usando JRadioButton para cambiar el tamaño de la ventana
+        Using JRadioButton to resize the window
+         */
+        private final JRadioButton radio1, radio2, radio3;
+        private final ButtonGroup bg;
 
         public FormularioA16() {
             setLayout(null);
@@ -1260,6 +1419,7 @@ public class pruebasJava {
             bg.add(radio3);
         }
 
+        @Override
         public void stateChanged(ChangeEvent e) {
             if (radio1.isSelected() == true) {
                 setSize(640, 480);
